@@ -57,7 +57,9 @@
 <div class="grid">
   {#if result.length > 0 && !loading}
     {#each result as data (data.uid)}
-      <a href={`/${data.uf}`}>
+      <a
+        href={`/${data.uf}`}
+        aria-label={`Ir para página do estado ${data.uf}`}>
         <StateCard {...data} />
       </a>
     {/each}
