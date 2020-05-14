@@ -18,7 +18,7 @@
 
 - 📈 Data about the spread of Covid-19 in brazilian states.
 
-# :contruction_worker: Installation
+# :construction_worker: Installation
 
 1. Clone the repo
 2. Install the dependencies
