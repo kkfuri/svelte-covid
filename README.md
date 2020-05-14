@@ -37,6 +37,6 @@ The tecnologies used in this project are [Svelte](https://svelte.dev/) with [Sap
 # :closed_book: License
 
 Released in 2020.
-This project is under the [MIT license](https://github.com/LauraBeatris/foodfy/master/LICENSE).
+This project is under the [MIT license](https://github.com/kkfuri/svelte-covid/blob/master/LICENSE).
 
 Made by [Diego](https://github.com/kkfuri)
