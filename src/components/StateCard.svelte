@@ -16,6 +16,7 @@
     height: 142px;
     border: 2px solid #ccc;
     padding: 16px 8px;
+    background: #fff;
   }
   h2 {
     white-space: nowrap;
