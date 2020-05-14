@@ -37,6 +37,16 @@
       grid-template-columns: repeat(1, minmax(0, 1fr));
     }
   }
+
+  a {
+    border: 0;
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  a:hover {
+    transform: scale(1.1);
+  }
 </style>
 
 <svelte:head>
@@ -47,7 +57,9 @@
 <div class="grid">
   {#if result.length > 0 && !loading}
     {#each result as data (data.uid)}
-      <StateCard {...data} />
+      <a href={`/${data.uf}`}>
+        <StateCard {...data} />
+      </a>
     {/each}
   {/if}
   {#if loading}
