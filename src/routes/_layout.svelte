@@ -6,15 +6,22 @@
     padding: 2em;
     margin: 0 auto;
     box-sizing: border-box;
+    min-height: calc(100vh - 72px);
   }
 
   footer {
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ededed;
     text-align: center;
   }
 
   h6 {
     font-size: 16px;
     font-family: monospace;
+    margin: 0;
   }
   a {
     color: #333;
