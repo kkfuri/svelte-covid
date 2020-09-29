@@ -1,32 +1,38 @@
 <script context="module">
-  export function preload({ params }) {
+  export async function preload({ params }) {
     const { uf } = params;
-    return { uf };
+    const res = await this.fetch(
+      `https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/${uf}`
+    );
+    const result = await res.json();
+    return { result };
   }
 </script>
 
 <script>
   import { onMount } from "svelte";
+  import { goto } from "@sapper/app";
   import StateCard from "../components/StateCard.svelte";
   import Skeleton from "../components/Skeleton.svelte";
-  export let uf;
-
-  let loading = false;
-  let result = null;
+  export let result;
 
   onMount(() => {
-    getDados();
+    if (result.error) goto("/");
   });
-
-  async function getDados() {
-    loading = true;
-    const res = await fetch(
-      `https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/${uf}`
-    );
-    result = await res.json();
-    loading = false;
-  }
 </script>
+
+<style>
+  div {
+    margin: 4rem auto;
+    max-width: 480px;
+  }
+  a {
+    transition: 0.4s;
+  }
+  a:hover {
+    color: mediumseagreen;
+  }
+</style>
 
 <svelte:head>
   <title>{result ? result.state : 'Estado do Brasil'}</title>
@@ -34,14 +40,8 @@
 
 <a href="/">Voltar</a>
 
-{#if result && !loading}
-  <div style="max-width: 320px; margin: 0 auto">
-    <StateCard {...result} />
-  </div>
-{/if}
-
-{#if loading}
-  <div style="max-width: 320px; margin: 0 auto">
-    <Skeleton />
+{#if !result.error}
+  <div>
+    <StateCard {...result} featured />
   </div>
 {/if}
