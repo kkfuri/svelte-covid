@@ -54,24 +54,50 @@
     height: 30px;
   }
 
-  #featured .img-wrapper {
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    height: 48px;
-  }
-
   article#featured {
     border: 2px solid mediumseagreen;
     padding: 48px 8px;
   }
 
+  #featured .img-wrapper {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    height: 24px;
+  }
+
   #featured h5,
   #featured h6 {
-    font-size: 2.4em;
+    font-size: 1.8em;
+  }
+
+  #featured img {
+    width: auto;
+    height: 24px;
   }
 
   #featured h2 {
-    font-size: 4em;
+    font-size: 2em;
+  }
+
+  @media (min-width: 767px) {
+    #featured .img-wrapper {
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      height: 48px;
+    }
+    #featured img {
+      width: auto;
+      height: 48px;
+    }
+
+    #featured h5,
+    #featured h6 {
+      font-size: 2.2em;
+    }
+
+    #featured h2 {
+      font-size: 2.6em;
+    }
   }
 </style>
 
@@ -80,8 +106,6 @@
     <h2>{state}</h2>
     <div class="img-wrapper">
       <img
-        width={featured ? 'auto' : 45}
-        height={featured ? 48 : 30}
         alt={state}
         src="https://devarthurribeiro.github.io/covid19-brazil-api/static/flags/{uf}.png" />
     </div>

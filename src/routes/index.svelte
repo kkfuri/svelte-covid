@@ -58,7 +58,7 @@
     font-weight: 900;
     text-align: center;
     margin: 16px 0;
-    font-size: 5.2em;
+    font-size: 4.4em;
   }
   .grid {
     display: grid;

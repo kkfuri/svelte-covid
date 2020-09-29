@@ -32,6 +32,10 @@
     color: mediumseagreen;
   }
 
+  h6 > a {
+    font-size: initial;
+  }
+
   a:hover {
     color: seagreen;
     transform: translateY(-4px);
