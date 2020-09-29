@@ -17,7 +17,9 @@
     border: 2px solid #ccc;
     padding: 16px 8px;
     background: #fff;
+    transition: border-color 0.4s;
   }
+
   h2 {
     white-space: nowrap;
     margin: 0 20px 0 0;
