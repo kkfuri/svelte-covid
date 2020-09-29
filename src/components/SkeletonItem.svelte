@@ -1,7 +1,7 @@
 <script>
-  export let width;
-  export let height;
-  export let margin;
+  export let width = 0;
+  export let height = 0;
+  export let margin = 0;
 </script>
 
 <style>
