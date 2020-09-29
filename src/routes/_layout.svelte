@@ -1,7 +1,7 @@
 <style>
   main {
     position: relative;
-    max-width: 84em;
+    max-width: 112em;
     background-color: white;
     padding: 2em;
     margin: 0 auto;
@@ -19,18 +19,22 @@
   }
 
   h6 {
-    font-size: 16px;
+    font-size: 1.6em;
     font-family: monospace;
     margin: 0;
   }
   a {
+    font-size: 1.4em;
     color: #333;
+    display: inline-block;
     text-decoration: none;
-    transition: 0.2s;
+    transition: transform 0.4s;
+    color: mediumseagreen;
   }
 
   a:hover {
-    font-size: 110%;
+    color: seagreen;
+    transform: translateY(-4px);
   }
 
   .github {
