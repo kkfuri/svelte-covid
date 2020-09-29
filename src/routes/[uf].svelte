@@ -27,6 +27,7 @@
     max-width: 480px;
   }
   a {
+    font-size: 1.4em;
     transition: 0.4s;
   }
   a:hover {
